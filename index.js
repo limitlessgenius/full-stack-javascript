@@ -5,7 +5,7 @@ const app = express()
 //listens to incoming requests and routes them 
 
 app.get('/', (req, res) => {
-	res.send({ val: 'HELLO' })
+	res.send({ val: 'NEW APPLICATION' })
 })
 
 const PORT = process.env.PORT || 5000
