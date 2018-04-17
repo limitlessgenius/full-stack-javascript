@@ -1,18 +1,20 @@
 
 const express = require('express')
-const app = express()
-//generates new app - spa
-//listens to incoming requests and routes them 
+const passport = require('passport')
+const GoogleStrategy = require('passport-google-auth20').Strategy
 
-app.get('/', (req, res) => {
-	res.send({ val: 'NEW APPLICATION' })
-})
+const app = express()
+
+passport.use(new GoogleStrategy())
 
 const PORT = process.env.PORT || 5000
-// prod vs dev environments
-// env vars - post deployment vars
-
 app.listen(PORT)
+
+//clientID
+// 247670904395-0hvulhlb2rd01batvbcj2qi2l07r1ter.apps.googleusercontent.com
+//clientSecret
+//kSY0Ob8GuBrziO5BE_nkAM7t
+
 
 
 
