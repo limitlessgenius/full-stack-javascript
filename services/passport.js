@@ -12,7 +12,7 @@ passport.serializeUser((user, done) => {
 })
 
 passport.deserializeUser((id, done) => {
-	User.findById(id).then(user => {
+	User.findById(id).then(user => { // USER IS NOT DEFINED BC , () =>
 		done(null, user)
 	})//user; wathever is been pulled out from the database
 })
